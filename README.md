@@ -3,15 +3,14 @@
 ## Content
 * [Summary](#Summary)
 * [ETL](#ETL)
-* [How to run](#How-to-run)
 * [Project structure](#Project-structure)
 * [Installation](#Installation)
 
 ### Summary
 This project involves the use of 2 AWS, [S3](https://aws.amazon.com/en/s3/) (Data storage)
-and [Redshift](https://aws.amazon.com/en/redshift/) (Data warehouse with ``columnar storage``)
+and [Redshift](https://aws.amazon.com/en/redshift/) (Data warehouse with ``columnar storage``).
 
-Data sources are provided by two public ``S3 buckets``. The first bucket contains information about songs and artists, while the second bucket contains simulated app activity logs by users. The objects contained in both buckets <br> are JSON files. 
+Data sources are provided by two public ``S3 buckets``. The first bucket contains information about songs and artists, while the second bucket contains simulated app activity logs by users. The objects contained in both buckets are JSON files. 
 
 Since the JSON data objects for the event logs data don't correspond directly to the column names, we will use a JSONPaths file to map the JSON elements to columns. The order does not matter in the JSON source data, but the order of the JSONPaths file expressions must match the column order.
 The COPY command is then used to access to the JSON files inside the S3 buckets and have their content copied onto the staging tables.
