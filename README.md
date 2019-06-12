@@ -8,7 +8,7 @@
 * [Installation](#Installation)
 
 ### Summary
-This project involves the use of 2 AWS, [S3](https://aws.amazon.com/en/s3/) (Data storage) <br>
+This project involves the use of 2 AWS, [S3](https://aws.amazon.com/en/s3/) (Data storage)
 and [Redshift](https://aws.amazon.com/en/redshift/) (Data warehouse with ``columnar storage``)
 
 Data sources are provided by two public ``S3 buckets``. The first bucket contains information about songs and artists, while the second bucket contains simulated app activity logs by users. The objects contained in both buckets <br> are JSON files. 
